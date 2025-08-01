@@ -1,0 +1,26 @@
+# UpdateItems Plugin Changelog
+
+## [1.1-SNAPSHOT] - 2025-08-01
+
+### Added
+- Support for updating items for **offline players** by modifying their MMOItems `PlayerData.yml` files.
+- Added aliases for the `/update` command: `updateitems`, `ui`.
+
+### Changed
+- Switched to using `MMOItemUtils.getNBT()` instead of accessing `MythicLib.plugin.getNBTItem()` directly.
+- Improved command registration to prevent `NullPointerException` on plugin startup.
+- Updated command executor logic to handle missing items and players more gracefully.
+
+### Fixed
+- Fixed issue where offline players were skipped entirely.
+- Fixed compatibility issues with newer versions of MythicLib and MMOItems.
+
+### Removed
+- Deprecated direct use of `SmartGive`; now relies on MMOItems' internal item handling utilities.
+
+---
+
+## [1.0-SNAPSHOT] - 2025-07-31
+
+- Initial release.
+- Added `/update <type> <id>` command to update specific MMOItems in online players' inventories.
