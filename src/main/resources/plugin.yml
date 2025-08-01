@@ -1,0 +1,10 @@
+name: UpdateItems
+version: 1.0-SNAPSHOT
+main: com.nauxi.UpdateItemsPlugin
+api-version: 1.21
+commands:
+  update:
+    description: Cập nhật item chỉ định cho tất cả người chơi (kể cả offline).
+    alias: [updateitems, ui]
+    usage: /update <type> <id>
+    permission: updateitems.use
